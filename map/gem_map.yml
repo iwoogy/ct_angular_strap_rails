@@ -1,0 +1,43 @@
+---
+module:
+  name: "$strap.directives"
+uis:
+  - name: bs-modal
+  - name: bs-dropdown
+  - name: bs-navbar
+  - name: bs-tabs
+  - name: bs-tooltip
+  - name: bs-popover
+  - name: bs-alert
+  - name: bs-button
+  - name: bs-button-select
+  - name: bs-buttons-checkbox
+  - name: bs-buttons-radio
+  - name: bs-typeahead
+  - name: $modal
+    type: service
+  - name: bs-select
+    dependencies:
+      packages:
+        - name: bootstrap-select
+  - name: bs-datepicker
+    dependencies:
+      packages:
+        - name: bootstrap-datepicker
+  - name: bs-timepicker
+    dependencies:
+      packages:
+        - name: bootstrap-timepicker
+dependencies:
+  javascript:
+    - name: "jquery"
+      version: "2.0.2"
+    - name: "twitter-bootstrap"
+      version: "2.3.2"
+  modules:
+    - name: ng-resource
+actions:
+  javascript:
+    include?: true
+  module:
+    include?: true
